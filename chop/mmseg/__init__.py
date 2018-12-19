@@ -107,7 +107,7 @@ class Vocabulary():
                     self.max_word_length = max([self.max_word_length, len(text)])
 
     def __load_punctuations(self):
-        with open(self.punctuation_path, 'r') as f:
+        with open(self.punctuation_path, 'r', encoding='utf-8') as f:
             for x in f.readlines():
                 p = x.strip()
                 if p: self.punctuation.append(p)
