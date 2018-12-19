@@ -99,7 +99,7 @@ class Vocabulary():
         self.__load_punctuations()
 
     def __load_dict(self):
-        with open(self.dict_path, 'r') as f:
+        with open(self.dict_path, 'r', encoding='utf-8') as f:
             for x in f.readlines():
                 if not x.startswith("#"):
                     text, freq, tag = x.split()
